@@ -54,6 +54,8 @@ setup(
         'ReParser>=1.4',
         # use forked urwid until there's a 1.3 release with colour bugfix
         'hangups-urwid==1.2.2-dev',
+        # backport enum for python3.3:
+        'enum34==1.0.4',
         # backport asyncio for python3.3:
         'asyncio==3.4.3',
     ],
