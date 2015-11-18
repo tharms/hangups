@@ -17,7 +17,7 @@ from hangups import (javascript, parsers, exceptions, http_utils, channel,
 
 logger = logging.getLogger(__name__)
 ORIGIN_URL = 'https://talkgadget.google.com'
-IMAGE_UPLOAD_URL = 'http://docs.google.com/upload/photos/resumable'
+IMAGE_UPLOAD_URL = 'https://docs.google.com/upload/photos/resumable'
 PVT_TOKEN_URL = 'https://talkgadget.google.com/talkgadget/_/extension-start'
 CHAT_INIT_URL = 'https://talkgadget.google.com/u/0/talkgadget/_/chat'
 CHAT_INIT_PARAMS = {
