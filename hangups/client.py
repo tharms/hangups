@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 ORIGIN_URL = 'https://talkgadget.google.com'
 IMAGE_UPLOAD_URL = 'https://docs.google.com/upload/photos/resumable'
 PVT_TOKEN_URL = 'https://talkgadget.google.com/talkgadget/_/extension-start'
-CHAT_INIT_URL = 'https://talkgadget.google.com/u/0/talkgadget/_/chat'
+CHAT_INIT_URL = 'https://hangouts.google.com/webchat/u/0/load'
 CHAT_INIT_PARAMS = {
     'prop': 'aChromeExtension',
     'fid': 'gtn-roster-iframe-id',
@@ -233,7 +233,8 @@ class Client(object):
                 # cgserp?
                 # data_dict['ds:21'][0][1][4]
                 # data_dict['ds:35'][0][1][4]
-                data_dict['ds:21'][0][1][4]
+                # data_dict['ds:21'][0][1][4]
+                data_dict['ds:20'][0][1][4]
             )
         except KeyError as e:
             raise exceptions.HangupsError('Failed to get initialize chat '
