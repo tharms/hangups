@@ -110,6 +110,7 @@ class OffTheRecordStatus(enum.Enum):
 
     OFF_THE_RECORD = 1
     ON_THE_RECORD = 2
+    UNKNOWN = None
 
 
 class ClientOffTheRecordToggle(enum.Enum):
