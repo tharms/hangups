@@ -161,8 +161,13 @@ class ChatMessageEvent(ConversationEvent):
                 # message segments, and thus have no automatic textual
                 # fallback.
                 try:
+                    if attachment.embed_item.data is not None:
+                        data = attachment.embed_item.data['27639957']
+                    else:
+                        # iOS f***ing around with byte stream field order
+                        data = attachment.embed_item.data_['27639957']
                     attachments.append(
-                        attachment.embed_item.data['27639957'][0][3]
+                        data[0][3]
                     )
                 except (KeyError, TypeError, IndexError):
                     logger.warning(

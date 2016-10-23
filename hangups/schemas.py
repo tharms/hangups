@@ -244,7 +244,7 @@ MESSAGE_ATTACHMENT = Message(
     ('embed_item', Message(
         # 249 (PLUS_PHOTO), 340, 335, 0
         ('type_', RepeatedField(Field())),
-        ('name', Field()),
+        ('data_', Field()),
         ('data', Field(is_optional=True)),  # can be a dict
     )),
 )
