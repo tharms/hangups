@@ -35,6 +35,7 @@ install_requires = [
     'hangups-urwid==1.2.2-dev',
     # backport asyncio for python3.3:
     'asyncio==3.4.3',
+    'MechanicalSoup==0.4.0',
 ]
 
 if sys.version_info < (3, 4):
@@ -64,6 +65,7 @@ setup(
     install_requires=install_requires,
     tests_require=[
         'pytest',
+        'httpretty==0.8.14',
     ],
     cmdclass={'test': PyTest},
     entry_points={
