@@ -21,7 +21,7 @@ IMAGE_UPLOAD_URL = 'https://docs.google.com/upload/photos/resumable'
 PVT_TOKEN_URL = 'https://talkgadget.google.com/talkgadget/_/extension-start'
 CHAT_INIT_URL = 'https://hangouts.google.com/webchat/u/0/load'
 CHAT_INIT_PARAMS = {
-    'prop': 'aChromeExtension',
+    'prop': 'StartPage',
     'fid': 'gtn-roster-iframe-id',
     'ec': '["ci:ec",true,true,false]',
     'pvt': None,  # Populated later
