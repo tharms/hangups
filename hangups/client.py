@@ -225,7 +225,7 @@ class Client(object):
         # Extract various values that we will need.
         try:
             self._api_key = data_dict['ds:7'][0][2]
-            self._email = data_dict['ds:34'][0][2]
+            self._email = data_dict['ds:36'][0][2]
             self._header_date = data_dict['ds:2'][0][4]
             self._header_version = data_dict['ds:2'][0][6]
             self._header_id = data_dict['ds:4'][0][7]
@@ -234,7 +234,7 @@ class Client(object):
                 # data_dict['ds:21'][0][1][4]
                 # data_dict['ds:35'][0][1][4]
                 # data_dict['ds:21'][0][1][4]
-                data_dict['ds:20'][0][1][4]
+                data_dict['ds:21'][0][1][4]
             )
         except KeyError as e:
             raise exceptions.HangupsError('Failed to get initialize chat '
@@ -245,7 +245,7 @@ class Client(object):
             # cgsirp?
             # data_dict['ds:20'][0]
             # data_dict['ds:35'][0]
-            data_dict['ds:20'][0]
+            data_dict['ds:21'][0]
         ).self_entity
 
         # Parse every existing conversation's state, including participants.
@@ -253,7 +253,7 @@ class Client(object):
             # csrcrp?
             # data_dict['ds:19'][0][3]
             # data_dict['ds:36'][0][3]
-            data_dict['ds:19'][0][3]
+            data_dict['ds:20'][0][3]
         )
         initial_conv_parts = []
         for conv_state in initial_conv_states:
@@ -268,7 +268,7 @@ class Client(object):
                 # cgserp?
                 # data_dict['ds:21'][0]
                 # data_dict['ds:37'][0]
-                data_dict['ds:21'][0]
+                data_dict['ds:22'][0]
             )
         except ValueError as e:
             logger.warning('Failed to parse initial client entities: {}'
