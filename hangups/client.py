@@ -217,7 +217,7 @@ class Client(object):
                     data_dict[data['key']] = data['data']
 
                 except ValueError as e:
-                    raise
+                    pass
 
                 # logger.debug('Failed to parse initialize chat object: {}\n{}'
                 #              .format(e, data))
@@ -268,7 +268,8 @@ class Client(object):
                 # cgserp?
                 # data_dict['ds:21'][0]
                 # data_dict['ds:37'][0]
-                data_dict['ds:22'][0]
+                # data_dict['ds:22'][0]
+                data_dict['ds:21'][0]
             )
         except ValueError as e:
             logger.warning('Failed to parse initial client entities: {}'
