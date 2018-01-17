@@ -74,7 +74,10 @@ def from_timestamp(microsecond_timestamp):
 
 def to_timestamp(datetime_timestamp):
     """Convert UTC datetime to microsecond timestamp used by Hangouts."""
-    return int(datetime_timestamp.timestamp() * 1000000)
+    try:
+        return int(datetime_timestamp.timestamp() * 1000000)
+    except:
+        return -1
 
 
 ##############################################################################
